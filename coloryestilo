@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Ejemplo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tienda Ejemplo</h1>
+</header>
+
+<section>
+    <h2>Sección de Compra</h2>
+    <p>Aquí puedes encontrar nuestros productos disponibles para la compra.</p>
+    <ul>
+        <li>Producto 1 - $100000</li>
+        <li>Producto 2 - $15</li>
+        <li>Producto 3 - $20</li>
+    </ul>
+    <nav>
+        <iframe src="http://www.amatistaswimwear.com" frameborder="0"></iframe>
+    
+        <iframe width="1017" height="572" src="https://www.youtube.com/embed/qe06-sAU4Bo"
+            title="TRAJES DE BAÑO DE SHEIN 👙☀️ LO QUE PEDÍ VS LO QUE ME LLEGO" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></nav>
+</section>
+
+<section>
+    <h2>Video de Presentación</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<section>
+    <h2>Datos de Contacto</h2>
+    <p>Email: contacto@tiendaejemplo.com</p>
+    <p>Teléfono: (123) 456-7890</p>
+</section>
+
+<section>
+    <h2>Ubicación</h2>
+    <p>Nuestra tienda está ubicada en:</p>
+    <p>Calle Ficticia 123, Ciudad Ejemplo, País Ejemplo</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509836!2d144.95373631531593!3d-37.8162799797518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11a9c7%3A0x5045675218ceed0!2sCalle%20Ficticia%20123%2C%20Ciudad%20Ejemplo!5e0!3m2!1ses!2ses!4v1632345678901!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<footer>
+    <p>&copy; 2023 Tienda Ejemplo. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
