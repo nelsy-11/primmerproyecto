@@ -1,0 +1,44 @@
+*<style>
+  body {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    margin: 1;
+                    padding: 0;
+                    background-color: rgb(7, 5, 5);
+
+                    }
+
+                header {
+                    background-color: #c7bad3;
+                    color: rgb(12, 6, 6);
+                    padding: 10px 20px;
+                    text-align: center;
+
+                    }
+
+                main {
+                    background-color: #f7f4fa;
+                    color: white;
+                    padding: 10px 20px;
+                    text-align: right;
+                    }
+
+                section {
+                    padding: 20px;
+                    margin: 10px;
+                    background-color: white;
+                    border-radius: 5px;
+
+                     }
+
+                 footer {
+                    text-align: center;
+                    padding: 10px;
+                    background-color: #9226da;
+                    color: rgb(2, 2, 5);
+                    position: relative;
+                    bottom: 0;
+                    width: 100%;
+                    }
+                    </style>
+
+ 

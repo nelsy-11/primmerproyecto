@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Tienda de ropa intima 
+Tienda de traje de baño 
 
 ## Contenido
 
