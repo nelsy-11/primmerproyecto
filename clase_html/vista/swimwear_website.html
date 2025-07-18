@@ -601,9 +601,19 @@
         <div class="cart-container">
           <button class="cart-icon" onclick="toggleCart()">🛒</button>
           <span class="cart-count" id="cartCount">0</span>
+          <div id="cartIcon"> <span id="cartCount">0</span>
+        <div id="cartModal" class="modal">
+                <span class="close">&times;</span>
+                <ul id="cartItems"></ul>
+                <div id="cartTotal"></div>
+        </div>
+              
 
           <!-- Botón Ver Carrito agregado -->
           <button onclick="toggleCart()">Ver Carrito (<span id="cartCount">0</span>)</button>
+         
+          </div> 
+          
         </div>
                 </div>
             </div>

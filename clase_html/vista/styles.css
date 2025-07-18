@@ -22,7 +22,7 @@ header {
 }
 
 main {
-    background-color: #f7f4fa;
+    background-color: #541a8e;
     color: white;
     padding: 10px 20px;
     text-align: right;
@@ -67,9 +67,9 @@ body {
 
 /* Header Styles aqui cambias el fondo*/
 header {
-    background: rgba(48, 48, 48, 0.95);
+    background: rgba(124, 19, 185, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(149, 92, 92, 0.1);
+    box-shadow: 0 4px 30px rgba(39, 48, 97, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;

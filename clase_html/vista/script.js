@@ -1,4 +1,3 @@
-//script.js
 console.log("Hola, mi script.js está conectado ✅");
 
 // 1. Creamos carrito vacío o lo traemos de localStorage si ya existe
@@ -7,7 +6,6 @@ updateCartCount();
 
 // 2. Función para agregar productos al carrito
 function addToCart(productName, price) {
-  // Buscamos si el producto ya existe
   const existingProduct = cart.find(p => p.name === productName);
   if (existingProduct) {
     existingProduct.quantity++;
@@ -132,6 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.style.display = 'none';
     }
   }
+
+  // ✅ NUEVO: agregar event listener al icono del carrito
+  const cartIcon = document.getElementById('cartIcon');
+  cartIcon.addEventListener('click', toggleCart);
 });
 
 // 8. Fetch API para traer productos desde una API y mostrarlos
@@ -158,5 +160,6 @@ function renderProducts(products) {
     container.appendChild(card);
   });
 }
+
 
 
