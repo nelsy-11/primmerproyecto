@@ -8,6 +8,7 @@
   <title>Summer Collection - Tienda de Trajes de Baño</title>
   <link rel="stylesheet" href="stylesheet.css" />
 </head>
+</head>
 
 <body>
   <header>
@@ -24,8 +25,6 @@
           <div class="cart-container">
             <button class="cart-icon" onclick="toggleCart()">🛒</button>
             <span class="cart-count" id="cartCount">0</span>
-            <!-- Botón Ver Carrito sin ID duplicado -->
-            <button onclick="toggleCart()">Ver Carrito (<span class="cart-count">0</span>)</button>
           </div>
         </div>
       </div>
@@ -34,23 +33,30 @@
 
   <main>
     <!-- Modal del carrito -->
-    <div id="cartModal" class="modal" style="display: none;">
+    <div id="cartModal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onclick="toggleCart()">&times;</span>
         <h2>Tu carrito de compras</h2>
-        <ul id="cartItems"></ul>
-        <p id="cartTotal"></p>
+        <div id="cartItems"></div>
+        <div class="cart-total" id="cartTotal">Total: $0.00</div>
+        <button class="add-to-cart" onclick="checkout()" style="margin-top: 1rem;">Finalizar Compra</button>
       </div>
     </div>
 
+    <!-- Notificación -->
+    <div id="notification" class="notification"></div>
+
     <div class="container">
       <!-- Hero Section -->
-      <section class="hero">
-        <img src="./assets/portada1.png" alt="Portada de trajes de baño" onerror="this.style.display='none'" />
+      <section class="hero fade-in">
+        <div
+          style="width: 100%; height: 400px; background: linear-gradient(45deg, #6982f3, #5c2099); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+          🌊 SUMMER COLLECTION 🌊
+        </div>
       </section>
 
       <!-- Navigation Menu -->
-      <nav class="main-nav">
+      <nav class="main-nav fade-in">
         <ul>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#productos">Productos</a></li>
@@ -60,124 +66,151 @@
       </nav>
 
       <!-- Products Section -->
-      <section class="products-section" id="productos">
+      <section class="products-section fade-in" id="productos">
         <h1>Nuestros Productos</h1>
         <div class="imagen-container">
-
           <!-- Producto 1 -->
           <div class="product-card">
-            <img src="./assets/verde1.png" alt="Traje de baño verde estampado" class="imagen"
-              onerror="this.style.display='none'" />
+            <div
+              style="width: 100%; height: 250px; background: linear-gradient(45deg, #10ac84, #00d2d3); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+              🌺 Bikini Verde
+            </div>
             <div class="product-info">
               <div class="product-name">Bikini Verde Tropical</div>
               <div class="product-price">
                 <span class="original-price">$45.99</span>
                 $39.99
               </div>
-              <button class="add-to-cart"
-                onclick="addToCart('Bikini Verde Tropical', 39.99)">Agregar al Carrito</button>
+              <button class="add-to-cart" onclick="addToCart('Bikini Verde Tropical', 39.99)">Agregar al
+                Carrito</button>
             </div>
           </div>
 
           <!-- Producto 2 -->
           <div class="product-card">
-            <img src="./assets/entero-verde1.png" alt="Traje de baño con flores" class="imagen"
-              onerror="this.style.display='none'" />
+            <div
+              style="width: 100%; height: 250px; background: linear-gradient(45deg, #2d3436, #636e72); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+              🌸 Bikini Floral
+            </div>
             <div class="product-info">
               <div class="product-name">Bikini Floral Verde</div>
               <div class="product-price">
                 <span class="original-price">$42.99</span>
                 $35.99
               </div>
-              <button class="add-to-cart"
-                onclick="addToCart('Bikini Floral Verde', 35.99)">Agregar al Carrito</button>
+              <button class="add-to-cart" onclick="addToCart('Bikini Floral Verde', 35.99)">Agregar al Carrito</button>
             </div>
           </div>
 
           <!-- Producto 3 -->
           <div class="product-card">
-            <img src="./assets/negro2.png" alt="Traje de baño entero negro" class="imagen"
-              onerror="this.style.display='none'" />
+            <div
+              style="width: 100%; height: 250px; background: linear-gradient(45deg, #2d3436, #636e72); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+              ⚫ Enterizo Negro
+            </div>
             <div class="product-info">
               <div class="product-name">Enterizo Negro Elegante</div>
               <div class="product-price">
                 <span class="original-price">$55.99</span>
                 $49.99
               </div>
-              <button class="add-to-cart"
-                onclick="addToCart('Enterizo Negro Elegante', 49.99)">Agregar al Carrito</button>
+              <button class="add-to-cart" onclick="addToCart('Enterizo Negro Elegante', 49.99)">Agregar al
+                Carrito</button>
             </div>
           </div>
 
           <!-- Producto 4 -->
           <div class="product-card">
-            <img src="./assets/blanco1.png" alt="Traje de baño blanco con rayas" class="imagen"
-              onerror="this.style.display='none'" />
+            <div
+              style="width: 100%; height: 250px; background: linear-gradient(45deg, #74b9ff, #0984e3); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+              ⚪ Bikini Blanco
+            </div>
             <div class="product-info">
               <div class="product-name">Bikini Blanco Rayas</div>
               <div class="product-price">
                 <span class="original-price">$38.99</span>
                 $32.99
               </div>
-              <button class="add-to-cart"
-                onclick="addToCart('Bikini Blanco Rayas', 32.99)">Agregar al Carrito</button>
+              <button class="add-to-cart" onclick="addToCart('Bikini Blanco Rayas', 32.99)">Agregar al Carrito</button>
             </div>
           </div>
 
           <!-- Producto 5 -->
           <div class="product-card">
-            <img src="./assets/lila1.png" alt="Traje de baño lila" class="imagen"
-              onerror="this.style.display='none'" />
+            <div
+              style="width: 100%; height: 250px; background: linear-gradient(45deg, #a29bfe, #6c5ce7); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+              💜 Bikini Lila
+            </div>
             <div class="product-info">
               <div class="product-name">Bikini Lila Premium</div>
               <div class="product-price">
                 <span class="original-price">$47.99</span>
                 $41.99
               </div>
-              <button class="add-to-cart"
-                onclick="addToCart('Bikini Lila Premium', 41.99)">Agregar al Carrito</button>
+              <button class="add-to-cart" onclick="addToCart('Bikini Lila Premium', 41.99)">Agregar al Carrito</button>
             </div>
           </div>
 
           <!-- Producto 6 -->
           <div class="product-card">
-            <img src="./assets/negro1.png" alt="Traje de baño negro deportivo" class="imagen"
-              onerror="this.style.display='none'" />
+            <div
+              style="width: 100%; height: 250px; background: linear-gradient(45deg, #2d3436, #636e72); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+              🖤 Bikini Deportivo
+            </div>
             <div class="product-info">
               <div class="product-name">Bikini Negro Deportivo</div>
               <div class="product-price">
                 <span class="original-price">$44.99</span>
-                $41.99
+                $37.99
               </div>
-              <button class="add-to-cart"
-                onclick="addToCart('Bikini Negro Deportivo', 37.99)">Agregar al Carrito</button>
+              <button class="add-to-cart" onclick="addToCart('Bikini Negro Deportivo', 37.99)">Agregar al
+                Carrito</button>
             </div>
           </div>
-
         </div>
       </section>
 
-      <!-- Google Reviews Section -->
-      <section class="reviews-section">
+      <!-- Reviews Section -->
+      <section class="reviews-section fade-in">
         <div class="reviews-header">
           <h2>Lo que dicen nuestros clientes</h2>
           <div class="google-rating">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
-              style="width: 30px; height: 30px;" />
+            <div
+              style="width: 30px; height: 30px; background: #4285f4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+              G</div>
             <div class="stars">★★★★★</div>
             <div class="rating-text">4.8/5 - Basado en 124 reseñas</div>
           </div>
         </div>
 
-        <div class="reviews-container">
-          <!-- Revisa si deseas acortar las reseñas para mobile en el CSS -->
-          <!-- Aquí van las review-cards que ya tienes -->
-          <!-- Código de reseñas intacto -->
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+          <div
+            style="background: #f8f9fa; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <div class="stars" style="margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: #666; font-style: italic; margin-bottom: 1rem;">"Excelente calidad y diseño. Los trajes de
+              baño son muy cómodos y el envío fue rápido."</p>
+            <p style="font-weight: bold; color: #333;">- María González</p>
+          </div>
+          <div
+            style="background: #f8f9fa; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <div class="stars" style="margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: #666; font-style: italic; margin-bottom: 1rem;">"Me encanta mi bikini nuevo! La tela es de
+              muy buena calidad y el color es exactamente como se ve en la foto."</p>
+            <p style="font-weight: bold; color: #333;">- Ana Rodríguez</p>
+          </div>
+          <div
+            style="background: #f8f9fa; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <div class="stars" style="margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: #666; font-style: italic; margin-bottom: 1rem;">"Servicio al cliente excelente. Tuve un
+              problema con mi talla y me ayudaron rápidamente."</p>
+            <p style="font-weight: bold; color: #333;">- Laura Martínez</p>
+          </div>
         </div>
       </section>
 
       <!-- Video Section -->
-      <section class="video-section">
+      <section class="video-section fade-in">
         <h2>Video de Presentación</h2>
         <iframe width="400" height="225" src="https://www.youtube.com/embed/qe06-sAU4Bo"
           title="Presentación de trajes de baño" frameborder="0"
@@ -187,18 +220,18 @@
       </section>
 
       <!-- Sales Section -->
-      <section class="sales-section">
+      <section class="sales-section fade-in">
         <h2>¡Ofertas Especiales!</h2>
         <p>Aquí puedes encontrar nuestros productos con descuento</p>
         <ul class="sales-list">
-          <li class="sales-item">Producto 1 - 15% menos</li>
-          <li class="sales-item">Producto 2 - 10% menos</li>
-          <li class="sales-item">Producto 3 - 5% menos</li>
+          <li class="sales-item">🏖️ Bikini Verde Tropical - 15% menos</li>
+          <li class="sales-item">🌺 Bikini Floral Verde - 10% menos</li>
+          <li class="sales-item">⚫ Enterizo Negro Elegante - 5% menos</li>
         </ul>
       </section>
 
       <!-- Contact Section -->
-      <section class="contact-section" id="contacto">
+      <section class="contact-section fade-in" id="contacto">
         <div class="contact-content">
           <div class="contact-info">
             <h2>Datos de Contacto</h2>
@@ -241,7 +274,6 @@
       <p>&copy; 2025 Tienda de Trajes de Baño. Todos los derechos reservados.</p>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 

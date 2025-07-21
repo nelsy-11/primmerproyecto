@@ -1,2 +1,0 @@
-# primmerproyecto
-my landing page 
